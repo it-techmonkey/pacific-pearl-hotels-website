@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import React, { useRef } from "react";
+import Image from "next/image";
 
 type ImageGridProps = {
   items: { src: string; title: string; description?: string; icon?: string }[];
