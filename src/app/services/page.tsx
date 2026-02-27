@@ -55,8 +55,8 @@ export default function ServicesPage() {
       <ScrollSpyLayout sections={scrollSections}>
         {serviceSections.map((section) => (
           <Reveal key={section.id}>
-            <div id={section.id} className="scroll-mt-24 border-b border-ink/10 py-10 md:py-12">
-              <div className="grid gap-8">
+            <div id={section.id} className="scroll-mt-24 py-1 md:py-2">
+              <div className="grid gap-1">
                 <div>
                   <div className="flex items-center gap-3">
                     <span className="h-7 w-2 bg-ink" aria-hidden />

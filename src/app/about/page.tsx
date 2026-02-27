@@ -58,7 +58,7 @@ const extractStrengthBlocks = (description: string) =>
 export default function AboutPage() {
   return (
     <div className="bg-[#f6f5f2]">
-      <section className="relative min-h-[70vh] overflow-hidden bg-ink pb-20 pt-28 text-sand">
+      <section className="relative min-h-[60vh] overflow-hidden bg-ink pb-10 pt-16 text-sand">
         <Image
           src="/assets/hotel-1.jpg"
           alt="Hotel exterior"
@@ -68,7 +68,7 @@ export default function AboutPage() {
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-ink/70" />
-        <div className="container relative z-10 flex min-h-[70vh] flex-col items-center justify-center text-center">
+        <div className="container relative z-10 flex min-h-[60vh] flex-col items-center justify-center text-center">
           <h1 className="text-4xl font-display uppercase tracking-[0.2em] md:text-6xl">
             About Us
           </h1>
@@ -81,33 +81,29 @@ export default function AboutPage() {
       <ScrollSpyLayout sections={scrollSections}>
         {aboutSections.map((section) => (
           <Reveal key={section.id}>
-            <div id={section.id} className="scroll-mt-24 border-b border-ink/10 py-10 md:py-12">
+            <div id={section.id} className="scroll-mt-24 py-1 md:py-2">
               <div
                 className={
                   section.id === "leadership"
-                    ? "grid gap-10 md:grid-cols-[1fr_240px] md:items-start"
-                    : "grid gap-8"
+                    ? "grid gap-1 md:grid-cols-[1fr_240px] md:items-start"
+                    : "grid gap-1"
                 }
               >
                 <div>
                   <div className="flex items-center gap-3">
                     <span className="h-7 w-2 bg-ink" aria-hidden />
-                    <h3 className="text-xl font-normal text-ink md:text-2xl">{section.title}</h3>
+                    <h3 className="text-xl font-normal text-ink md:text-2xl">{section.id === "recognition" ? ACCOLADE_LABEL : section.title}</h3>
                   </div>
                   {section.id === "recognition" ? (
                     <div className="mt-4 space-y-5">
-                      <p className="text-sm font-medium text-ink/70 md:text-base">
-                        {ACCOLADE_LABEL}
-                      </p>
                       <div className="grid auto-rows-fr gap-8 sm:grid-cols-2 lg:grid-cols-4">
                         {extractAccolades(section.description)
                           .filter((item) => item.number && item.text)
                           .map((item) => (
                             <div
                               key={`${item.number}-${item.text.slice(0, 12)}`}
-                              className="flex h-full min-h-105 flex-col items-center border border-[#c9b487] bg-[#f8f3ec] px-4 py-6 text-center shadow-[0_10px_30px_rgba(201,180,135,0.18)]"
+                              className="flex h-full min-h-105 max-w-52 flex-col items-center border border-[#c9b487] bg-[#f8f3ec] px-4 py-6 text-center shadow-[0_10px_30px_rgba(201,180,135,0.18)]"
                             >
-                              <span className="mb-4 h-1 w-10 bg-[#c9b487]" aria-hidden />
                               <div className="flex items-center justify-center gap-3">
                                 <Image
                                   src="/assets/Vector_Left.svg"
