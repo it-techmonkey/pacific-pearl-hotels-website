@@ -138,7 +138,8 @@ export default function ServicesPage() {
                                 {listItems.map((item, i) => (
                                   <div
                                     key={i}
-                                    className="flex-auto border border-[#00224b] bg-[#f7fbff] px-5 py-2 text-[15px] leading-snug text-[#00224b] font-normal text-left max-w-full min-h-8"
+                                    className="border border-[#00224b] bg-[#f7fbff] px-5 py-2 text-[15px] leading-snug text-[#00224b] font-normal text-left min-h-8"
+                                    style={{ width: 'fit-content', minWidth: 0 }}
                                   >
                                     {item}
                                   </div>
