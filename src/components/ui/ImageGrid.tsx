@@ -77,7 +77,7 @@ export function ImageGrid({ items, fullBleed = false }: ImageGridProps) {
         {items.map((item) => (
           <div
             key={item.src}
-            className="group relative h-80 w-[200px] shrink-0 snap-center overflow-hidden md:h-[360px] md:w-[240px] lg:h-[420px] lg:w-[280px]"
+            className="group relative h-80 w-50 shrink-0 snap-center overflow-hidden md:h-90 md:w-60 lg:h-105 lg:w-70"
           >
             <Image
               src={item.src}

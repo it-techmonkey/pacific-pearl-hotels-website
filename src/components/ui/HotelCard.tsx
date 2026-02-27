@@ -78,7 +78,7 @@ export function HotelCard({ name, location, stars, phone, rooms, status, image }
           <Button
             href="#"
             shape="rect"
-            className="w-full rounded-md bg-[#00162b] py-2 text-sm text-white shadow-[0_6px_12px_rgba(0,22,43,0.2)] hover:bg-[#00162b]/90 md:w-auto md:min-w-[240px] md:px-14"
+            className="w-full rounded-md bg-[#00162b] py-2 text-sm text-white shadow-[0_6px_12px_rgba(0,22,43,0.2)] hover:bg-[#00162b]/90 md:w-auto md:min-w-60 md:px-14"
           >
             Visit Site
           </Button>

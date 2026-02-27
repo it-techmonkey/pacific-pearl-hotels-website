@@ -56,7 +56,7 @@ export function Header() {
                 className="group relative text-sm font-medium uppercase tracking-[0.18em] text-sand transition-colors"
               >
                 {link.label}
-                <span className="absolute -bottom-2 left-0 h-[2px] w-0 bg-sand transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-2 left-0 h-0.5 w-0 bg-sand transition-all duration-300 group-hover:w-full" />
               </Link>
             </motion.div>
           ))}

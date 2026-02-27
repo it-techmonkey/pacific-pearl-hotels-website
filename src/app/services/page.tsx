@@ -102,12 +102,12 @@ export default function ServicesPage() {
                             {/* Main Content Area */}
                             <div className="flex flex-col lg:flex-row items-start gap-6 lg:gap-8">
                               {/* Image Column */}
-                              <div className="relative w-full lg:w-[42%] aspect-[3/2] shrink-0">
+                              <div className="relative w-full lg:w-[42%] aspect-3/2 shrink-0">
                                 <Image
                                   src={card.image || getImageForCard(card.title)}
                                   alt={card.title}
                                   fill
-                                  className="object-cover rounded-[2px] shadow-[0_2px_8px_rgba(0,0,0,0.1)]"
+                                  className="object-cover rounded-xs shadow-[0_2px_8px_rgba(0,0,0,0.1)]"
                                 />
                               </div>
                               {/* Text Column */}
@@ -123,7 +123,7 @@ export default function ServicesPage() {
                                   <ul className="mt-5 space-y-3">
                                     {listItems.map((item, i) => (
                                       <li key={i} className="flex items-start gap-3 text-[15px] lg:text-[16px] leading-[1.6] text-[#475569]">
-                                        <span className="mt-[10px] h-[5px] w-[5px] shrink-0 rounded-full bg-[#475569]" />
+                                        <span className="mt-2.5 h-1.25 w-1.25 shrink-0 rounded-full bg-[#475569]" />
                                         {item}
                                       </li>
                                     ))}
@@ -138,7 +138,7 @@ export default function ServicesPage() {
                                 {listItems.map((item, i) => (
                                   <div
                                     key={i}
-                                    className="flex-auto border border-[#00224b] bg-[#f7fbff] px-5 py-2 text-[15px] leading-snug text-[#00224b] font-normal text-left max-w-full min-h-[32px]"
+                                    className="flex-auto border border-[#00224b] bg-[#f7fbff] px-5 py-2 text-[15px] leading-snug text-[#00224b] font-normal text-left max-w-full min-h-8"
                                   >
                                     {item}
                                   </div>
