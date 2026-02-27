@@ -10,7 +10,7 @@ export function LogoMarquee({ logos }: LogoMarqueeProps) {
       <div className="container">
         <h2 className="text-center text-3xl font-display font-normal text-ink md:text-4xl">Brand Affiliations</h2>
       </div>
-      <div className="mt-6">
+      <div className="mt-12">
         <div className="marquee flex items-center gap-12">
           {[...logos, ...logos].map((logo, index) => (
             <div key={`${logo.alt}-${index}`} className="relative h-16 w-40 md:h-20 md:w-48">
