@@ -41,7 +41,7 @@ export function Header() {
           : "bg-transparent"
       }`}
     >
-      <div className="container flex items-center justify-between py-3">
+      <div className="container flex items-center justify-between py-3 min-h-[64px]">
         {/* Desktop Nav - left of logo */}
         <nav className="hidden lg:flex items-center gap-8 flex-1 justify-end">
           {navLinks.map((link, index) => (
@@ -103,22 +103,23 @@ export function Header() {
         {/* Hamburger right on mobile */}
         <button
           type="button"
-          className="inline-flex items-center justify-center p-2 text-sand transition-colors lg:hidden ml-auto focus:outline-none"
+          className="inline-flex items-center justify-center p-2 text-sand transition-colors lg:hidden ml-auto focus:outline-none h-12"
           aria-label="Toggle menu"
           onClick={() => setMenuOpen((prev) => !prev)}
         >
           <span className="sr-only">Toggle navigation</span>
-          <div className="relative w-6 h-6">
-            <span
-              className={`absolute left-0 top-2.5 h-0.5 ${menuOpen ? 'w-4 rotate-45 top-4 left-1' : 'w-6'} bg-current transition-all duration-200 ease-in-out`}
-            />
-            <span
-              className={`absolute left-0 top-5 h-0.5 ${menuOpen ? 'w-4 left-1 opacity-0' : 'w-6'} bg-current transition-all duration-200 ease-in-out`}
-            />
-            <span
-              className={`absolute left-0 top-7.5 h-0.5 ${menuOpen ? 'w-4 -rotate-45 top-4 left-1' : 'w-6'} bg-current transition-all duration-200 ease-in-out`}
-            />
-          </div>
+          {menuOpen ? (
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7 mx-auto my-auto">
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          ) : (
+            <div className="relative w-6 h-6 mx-auto my-auto">
+              <span className="absolute left-0 top-2.5 h-0.5 w-6 bg-current transition-all duration-200 ease-in-out" />
+              <span className="absolute left-0 top-5 h-0.5 w-6 bg-current transition-all duration-200 ease-in-out" />
+              <span className="absolute left-0 top-7.5 h-0.5 w-6 bg-current transition-all duration-200 ease-in-out" />
+            </div>
+          )}
         </button>
       </div>
       <AnimatePresence>
