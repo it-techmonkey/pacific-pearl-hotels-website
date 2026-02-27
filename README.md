@@ -6,8 +6,6 @@ A production-ready, multi-page Next.js site for Pacific Pearl Hotels.
 
 - Next.js (App Router) + TypeScript
 - Tailwind CSS
-- Framer Motion
-- ESLint + Prettier
 
 ## Local Development
 
