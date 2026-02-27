@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { PartnerCta } from "@/components/ui/PartnerCta";
+import { RouteLoader } from "@/components/ui/RouteLoader";
 
 const generalSans = localFont({
   variable: "--font-sans",
@@ -55,6 +56,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${generalSans.variable} ${satoshi.variable} text-ink antialiased`}>
+        <RouteLoader />
         <Header />
         <main>{children}</main>
         <PartnerCta />
