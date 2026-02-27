@@ -1,65 +1,149 @@
-import Image from "next/image";
+import Link from "next/link";
+import type { Metadata } from "next";
+import { heroContent, imageGridItems, featuredProjects } from "@/data/home";
+import { partnerLogos } from "@/data/logos";
+import { buildMailto } from "@/lib/mailto";
+import { Button } from "@/components/ui/Button";
+import { FeatureGrid } from "@/components/ui/FeatureGrid";
+import { ImageGrid } from "@/components/ui/ImageGrid";
+import { LogoMarquee } from "@/components/ui/LogoMarquee";
+import { Reveal } from "@/components/ui/Reveal";
+import { Section } from "@/components/ui/Section";
+
+export const metadata: Metadata = {
+  title: "Home",
+  description:
+    "Pacific Pearl Hotels provides hospitality management and asset stewardship for ambitious owners.",
+};
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div>
+      <section className="relative min-h-screen overflow-hidden bg-ink text-sand">
+        <video
+          className="absolute inset-0 h-full w-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/assets/slide1.jpg"
+        >
+          <source src="/assets/hero-bg.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-ink/70" />
+        <div className="container relative z-10 flex min-h-[85vh] flex-col items-center justify-center pb-16 pt-28 text-center">
+          <h1 className="mt-4 max-w-4xl text-4xl font-display md:text-6xl">
+            {heroContent.title.split("\n").map((line) => (
+              <span key={line} className="block">
+                {line}
+              </span>
+            ))}
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="mt-6 max-w-3xl text-base text-sand/85 md:text-lg">
+            {heroContent.subtitle}
           </p>
+          <div className="mt-8 flex flex-wrap gap-4">
+            <Button
+              href={buildMailto("career")}
+              shape="rect"
+              className="bg-white !text-[#000E22] font-light normal-case tracking-normal ring-1 ring-black/10 hover:bg-transparent hover:!text-white hover:ring-white"
+            >
+              {heroContent.primaryCta}
+            </Button>
+            <Button
+              href={buildMailto("partner")}
+              shape="rect"
+              className="bg-[#000E22] text-sand font-light normal-case tracking-normal ring-1 ring-black/20 hover:bg-white hover:text-[#000E22]"
+            >
+              {heroContent.secondaryCta}
+            </Button>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      </section>
+
+      <LogoMarquee logos={partnerLogos} />
+
+      <section className="bg-[#000103] py-10 text-white md:py-12">
+        <div className="container text-center">
+          <h2 className="mt-4 text-3xl font-display md:text-5xl">
+            Our Impressive Portfolio of Hospitality Assets
+          </h2>
+          <p className="mx-auto mt-4 max-w-4xl text-sm text-white/80 md:text-base">
+            For over 35 years, Pacific Pearl Hotels has combined top-tier hospitality expertise
+            with an innovative mindset, continually evolving to meet the needs of today’s guests
+            and owners. Based in San Diego, California, Pacific Pearl Hotels (PPH) is one of the
+            nation’s largest independent hotel companies. Pacific Pearl Hotels owns and operates
+            23 lodging properties, encompassing over 6,500 rooms and employing more than 3,200
+            team members. We are proud to deliver exceptional experiences across diverse markets
+            through our portfolio of full-service, select-service, extended-stay, boutique, and
+            luxury resorts.
+          </p>
+          <Link
+            href="/hotels"
+            className="mt-8 inline-flex items-center justify-center border border-[#bda078] px-6 py-3 text-sm font-medium text-[#bda078] transition-colors hover:bg-[#bda078] hover:text-white"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            Learn More
+          </Link>
         </div>
-      </main>
+      </section>
+
+      <section className="bg-white py-10 md:py-12">
+        <div className="container text-center">
+          <h2 className="text-3xl font-display text-ink md:text-5xl">
+            Why We Stand Out in Hospitality
+          </h2>
+          <p className="mx-auto mt-4 max-w-4xl text-sm text-ink/70 md:text-base">
+            At Pacific Pearl Hotels, our mission is to reimagine hotel management by blending
+            timeless hospitality with forward-thinking innovation. We create spaces that honor
+            local culture, elevate guest wellbeing, and deliver lasting value for owners and
+            partners. Guided by sustainability, empowered by technology and data, and inspired by
+            our deep hospitality roots, we aim to be more than operators. We are storytellers of
+            place, architects of experience, and stewards of long-term growth.
+          </p>
+          <Link
+            href={buildMailto("career")}
+            className="mt-8 inline-flex items-center justify-center border border-ink px-6 py-3 text-sm font-medium text-ink transition-colors hover:bg-ink hover:text-white"
+          >
+            Join Us
+          </Link>
+        </div>
+      </section>
+
+      <section className="py-10 md:py-12">
+        <div className="container">
+          <Reveal>
+            <ImageGrid items={imageGridItems} fullBleed />
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="bg-white py-10 md:py-12">
+        <div className="container text-center">
+          <h2 className="text-3xl font-display text-ink md:text-5xl">
+            Our Featured Projects
+          </h2>
+          <p className="mx-auto mt-4 max-w-3xl text-sm text-ink/70 md:text-base">
+            Our commitment to proven performance ensures consistent success across our properties and diverse asset classes. We
+            leverage data-driven strategies to maximize returns and enhance guest satisfaction.
+          </p>
+          <Link
+            href="/hotels"
+            className="mt-8 inline-flex items-center justify-center border border-ink px-6 py-3 text-sm font-medium text-ink transition-colors hover:bg-ink hover:text-white"
+          >
+            View our Flagship Resorts
+          </Link>
+        </div>
+      </section>
+
+      <section className="py-10 md:py-12">
+        <div className="container">
+          <Reveal>
+            <FeatureGrid items={featuredProjects} />
+          </Reveal>
+        </div>
+      </section>
+
+
     </div>
   );
 }
