@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { PlaceholderPage } from "@/components/ui/PlaceholderPage";
-import { useI18n } from "@/i18n/i18n";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -8,7 +7,6 @@ export const metadata: Metadata = {
 };
 
 export default function PrivacyPage() {
-  const { t } = useI18n();
   return (
     <div className="bg-[#f6f5f2]">
       <section className="relative min-h-[70vh] overflow-hidden bg-ink pb-20 pt-28 text-sand">
