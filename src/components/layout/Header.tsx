@@ -63,8 +63,8 @@ export function Header() {
         </nav>
 
         {/* Logo center */}
-        <Link href="/" className="flex items-center justify-center text-sand mx-8">
-          <div className="relative h-8 w-12 sm:w-20 md:w-28">
+        <Link href="/" className="flex items-center justify-center text-sand mx-8 h-12">
+          <div className="relative h-12 w-12 sm:w-20 md:w-28 flex items-center justify-center">
             <Image
               src="/assets/Logo.png"
               alt="Pacific Pearl Hotels"
