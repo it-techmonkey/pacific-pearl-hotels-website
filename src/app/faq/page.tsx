@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description: "Frequently asked questions about Pacific Pearl Hotels services.",
 };
 
+export default function FAQPage() {
   return (
     <PlaceholderPage
       eyebrow="FAQ"

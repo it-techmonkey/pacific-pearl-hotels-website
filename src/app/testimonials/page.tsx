@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description: "Owner and partner perspectives on Pacific Pearl Hotels.",
 };
 
+export default function TestimonialsPage() {
   return (
     <PlaceholderPage
       eyebrow="Testimonials"

@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description: "Pacific Pearl Hotels terms and conditions.",
 };
 
+export default function TermsPage() {
   return (
     <PlaceholderPage
       eyebrow="Terms & Conditions"

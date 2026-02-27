@@ -20,4 +20,5 @@ export default function PrivacyPage() {
       </section>
       {/* ...rest of privacy content... */}
     </div>
+  );
 }
