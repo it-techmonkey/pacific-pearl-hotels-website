@@ -26,7 +26,6 @@ export default function Home() {
           muted
           loop
           playsInline
-          poster="/assets/slide1.jpg"
         >
           <source src="/assets/hero-bg.mp4" type="video/mp4" />
         </video>
