@@ -58,7 +58,7 @@ const extractStrengthBlocks = (description: string) =>
 export default function AboutPage() {
   return (
     <div className="bg-[#f6f5f2]">
-      <section className="relative min-h-[60vh] overflow-hidden bg-ink pb-10 pt-16 text-sand">
+      <section className="relative min-h-screen overflow-hidden bg-ink pb-10 pt-16 text-sand">
         <Image
           src="/assets/hotel-1.jpg"
           alt="Hotel exterior"
@@ -68,7 +68,7 @@ export default function AboutPage() {
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-ink/70" />
-        <div className="container relative z-10 flex min-h-[60vh] flex-col items-center justify-center text-center">
+        <div className="container relative z-10 flex min-h-screen flex-col items-center justify-center text-center">
           <h1 className="text-4xl font-display uppercase tracking-[0.2em] md:text-6xl">
             About Us
           </h1>
