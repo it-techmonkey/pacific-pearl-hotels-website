@@ -1,5 +1,27 @@
 export const hotels = [
   {
+    "id": 93,
+    "name": "Tru by Hilton Colorado Springs Airport",
+    "location": "Colorado Springs, CO",
+    "stars": "3-Star Hotel",
+    "phone": "(719) 418-0000",
+    "rooms": 98,
+    "status": "current",
+    "image": "/downloaded_assets_27th/Tru by hilton colorado.avif",
+    "website": "https://www.hilton.com/en/hotels/cosarru-tru-colorado-springs-airport/"
+  },
+  {
+    "id": 94,
+    "name": "Homewood Suites by Hilton Colorado Springs Airport",
+    "location": "Colorado Springs, CO",
+    "stars": "3-Star Hotel",
+    "phone": "(719) 574-2701",
+    "rooms": 104,
+    "status": "current",
+    "image": "/downloaded_assets_27th/Homewood suites by hilton colorado.avif",
+    "website": "https://www.hilton.com/en/hotels/cosaohw-homewood-suites-colorado-springs-airport/"
+  },
+  {
     "id": 1,
     "name": "DoubleTree by Hilton Phoenix Midtown",
     "location": "Phoenix, AZ",

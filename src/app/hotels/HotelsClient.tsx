@@ -53,6 +53,7 @@ export function HotelsClient() {
               rooms={hotel.rooms}
               status={hotel.status}
               image={hotel.image}
+              website={"website" in hotel ? hotel.website : undefined}
             />
           </Reveal>
         ))}

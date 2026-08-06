@@ -10,9 +10,10 @@ type HotelCardProps = {
   rooms: number;
   status: string;
   image: string;
+  website?: string;
 };
 
-export function HotelCard({ name, location, stars, phone, rooms, status, image }: HotelCardProps) {
+export function HotelCard({ name, location, stars, phone, rooms, status, image, website }: HotelCardProps) {
   const statusLabel = status === "current" ? "Current" : "Exited";
   const roomsLabel = rooms > 0 ? `${rooms} Rooms` : "Rooms N/A";
 
@@ -76,7 +77,7 @@ export function HotelCard({ name, location, stars, phone, rooms, status, image }
             {statusLabel}
           </span>
           <a
-            href="https://example.com"
+            href={website ?? "https://example.com"}
             target="_blank"
             rel="noopener noreferrer"
             className="w-full rounded-md bg-[#00162b] py-2 text-sm text-white shadow-[0_6px_12px_rgba(0,22,43,0.2)] hover:bg-[#00162b]/90 md:w-auto md:min-w-60 md:px-14 inline-flex items-center justify-center"
