@@ -71,19 +71,21 @@ export function HotelCard({ name, location, stars, phone, rooms, status, image, 
             className={`inline-flex w-full items-center justify-center rounded-md border px-4 py-2 text-xs font-semibold md:w-fit ${
               status === "current"
                 ? "border-[#6bbf59] bg-[#e8f6e7] text-[#2f8f2f]"
-                : "border-[#6bbf59] bg-[#e8f6e7] text-[#2f8f2f]"
+                : "border-[#d96a6a] bg-[#fdecec] text-[#c02626]"
             }`}
           >
             {statusLabel}
           </span>
-          <a
-            href={website ?? "https://example.com"}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full rounded-md bg-[#00162b] py-2 text-sm text-white shadow-[0_6px_12px_rgba(0,22,43,0.2)] hover:bg-[#00162b]/90 md:w-auto md:min-w-60 md:px-14 inline-flex items-center justify-center"
-          >
-            Visit Site
-          </a>
+          {status === "current" && website ? (
+            <a
+              href={website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full rounded-md bg-[#00162b] py-2 text-sm text-white shadow-[0_6px_12px_rgba(0,22,43,0.2)] hover:bg-[#00162b]/90 md:w-auto md:min-w-60 md:px-14 inline-flex items-center justify-center"
+            >
+              Visit Site
+            </a>
+          ) : null}
         </div>
       </div>
     </article>
