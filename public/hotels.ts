@@ -29,7 +29,8 @@ export const hotels = [
     "phone": "(602) 279-9811",
     "rooms": 156,
     "status": "current",
-    "image": "/downloaded_assets_27th/DoubleTree.avif"
+    "image": "/downloaded_assets_27th/DoubleTree.avif",
+    "website": "https://www.hilton.com/en/hotels/phxardt-doubletree-phoenix-midtown/"
   },
   {
     "id": 2,
@@ -39,7 +40,8 @@ export const hotels = [
     "phone": "619-435-4121",
     "rooms": 31,
     "status": "current",
-    "image": "/downloaded_assets_27th/CoronadoInn.jpg"
+    "image": "/downloaded_assets_27th/CoronadoInn.jpg",
+    "website": "https://coronadoinn.com/"
   },
   {
     "id": 3,
@@ -49,7 +51,8 @@ export const hotels = [
     "phone": "(619) 881-6100",
     "rooms": 316,
     "status": "current",
-    "image": "/downloaded_assets_27th/Wyndham.avif"
+    "image": "/downloaded_assets_27th/Wyndham.avif",
+    "website": "https://www.wyndhamhotels.com/wyndham-garden/san-diego-california/wyndham-garden-san-diego-near-seaworld/overview"
   },
   {
     "id": 4,
@@ -59,7 +62,8 @@ export const hotels = [
     "phone": "(510) 490-8390",
     "rooms": 315,
     "status": "current",
-    "image": "/downloaded_assets_27th/doubletree-pleasanton-hotel.avif"
+    "image": "/downloaded_assets_27th/doubletree-pleasanton-hotel.avif",
+    "website": "https://www.hilton.com/en/hotels/nwkbddt-doubletree-newark-fremont/"
   },
   {
     "id": 5,
@@ -69,7 +73,8 @@ export const hotels = [
     "phone": "(210) 497-4000",
     "rooms": 106,
     "status": "current",
-    "image": "/downloaded_assets_27th/Home2.avif"
+    "image": "/downloaded_assets_27th/Home2.avif",
+    "website": "https://www.hilton.com/en/hotels/satokht-home2-suites-san-antonio-north-stone-oak/"
   },
   {
     "id": 6,
@@ -79,7 +84,8 @@ export const hotels = [
     "phone": "(925) 463-8000",
     "rooms": 292,
     "status": "current",
-    "image": "/downloaded_assets_27th/doubletree-pleasanton-hotel.avif"
+    "image": "/downloaded_assets_27th/doubletree-pleasanton-hotel.avif",
+    "website": "https://www.hilton.com/en/hotels/plepcdt-doubletree-pleasanton-at-the-club/"
   },
   {
     "id": 7,
@@ -89,7 +95,8 @@ export const hotels = [
     "phone": "(602) 267-0606",
     "rooms": 106,
     "status": "current",
-    "image": "/downloaded_assets_27th/HamptonbyHiltonPhoenixAirportNorth.avif"
+    "image": "/downloaded_assets_27th/HamptonbyHiltonPhoenixAirportNorth.avif",
+    "website": "https://www.hilton.com/en/hotels/phxaphx-hampton-phoenix-airport-north/"
   },
   {
     "id": 8,
@@ -99,7 +106,8 @@ export const hotels = [
     "phone": "(714) 739-5600",
     "rooms": 202,
     "status": "current",
-    "image": "/downloaded_assets_27th/buena-park-grand-hotel-suites-image-2.jpg"
+    "image": "/downloaded_assets_27th/buena-park-grand-hotel-suites-image-2.jpg",
+    "website": "https://www.marriott.com/en-us/hotels/snabh-the-buena-park-grand-hotel-and-suites/overview/"
   },
   {
     "id": 9,
@@ -109,7 +117,8 @@ export const hotels = [
     "phone": "619-435-4121",
     "rooms": 14,
     "status": "current",
-    "image": "/downloaded_assets_27th/coronadoislandinn.jpg"
+    "image": "/downloaded_assets_27th/coronadoislandinn.jpg",
+    "website": "https://coronadoislandinn.com/"
   },
   {
     "id": 10,
@@ -119,7 +128,8 @@ export const hotels = [
     "phone": "(915) 887-0300",
     "rooms": 111,
     "status": "current",
-    "image": "/downloaded_assets_27th/elpapht-home2-suites-el-paso-airport-hotel-day.avif"
+    "image": "/downloaded_assets_27th/elpapht-home2-suites-el-paso-airport-hotel-day.avif",
+    "website": "https://www.hilton.com/en/hotels/elpapht-home2-suites-el-paso-airport/"
   },
   {
     "id": 11,
@@ -129,7 +139,8 @@ export const hotels = [
     "phone": "(903) 872-2238",
     "rooms": 79,
     "status": "current",
-    "image": "/downloaded_assets_27th/HamptonInn&BoerneTX.webp"
+    "image": "/downloaded_assets_27th/HamptonInn&BoerneTX.webp",
+    "website": "https://www.hilton.com/en/hotels/crstxhx-hampton-suites-corsicana/"
   },
   {
     "id": 12,
@@ -139,18 +150,22 @@ export const hotels = [
     "phone": "(903) 874-7440",
     "rooms": 79,
     "status": "current",
-    "image": "/downloaded_assets_27th/holiday-inn-express-and-suites-corsicana.avif"
+    "image": "/downloaded_assets_27th/holiday-inn-express-and-suites-corsicana.avif",
+    "website": "https://www.ihg.com/holidayinnexpress/hotels/us/en/corsicana/crcna/hoteldetail"
   },
-  {
-    "id": 13,
-    "name": "I call Laguna Hills",
-    "location": "Laguna, CA",
-    "stars": "1-Star Hotel",
-    "phone": "(949) 586-5000",
-    "rooms": 142,
-    "status": "current",
-    "image": "/downloaded_assets_27th/voco-laguna-hills.jpeg"
-  },
+  // TEMPORARILY HIDDEN - id 13: name "I call Laguna Hills" appears to be placeholder
+  // text, not a real property name. Image filename suggests this is voco Laguna Hills.
+  // Confirm the correct name + website, then uncomment.
+  // {
+  //   "id": 13,
+  //   "name": "I call Laguna Hills",
+  //   "location": "Laguna, CA",
+  //   "stars": "1-Star Hotel",
+  //   "phone": "(949) 586-5000",
+  //   "rooms": 142,
+  //   "status": "current",
+  //   "image": "/downloaded_assets_27th/voco-laguna-hills.jpeg"
+  // },
   {
     "id": 14,
     "name": "Drift Thelu Veliga",
